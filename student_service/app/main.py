@@ -98,6 +98,5 @@ async def enroll_student(subject_id: int, db: Session = Depends(get_db)):
     return {"message": "Successfully enrolled"}
 
 
-
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=80)
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv('PORT', 80)))
