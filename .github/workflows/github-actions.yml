@@ -23,6 +23,7 @@ jobs:
           pip install pytest
           pip install pytest-asyncio
           pip install asyncpg
+          pip install passlib
           pip install --no-cache-dir --upgrade -r subject_service/requirements.txt
 
       - name: Prepare for tests (compose up)
