@@ -7,7 +7,7 @@ from passlib.context import CryptContext
 from typing import Optional
 from pydantic import BaseModel
 
-from database.database import RetakeSubjectDB, StudentDB, SessionLocal
+from student_database.database import RetakeSubjectDB, StudentDB, SessionLocal
 
 app = FastAPI()
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
