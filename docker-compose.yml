@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+
+  student_service:
+    restart: on-failure
+    container_name: student_service
+    build: student_service/
+    ports:
+      - "8000:80"
+
+  subject_service:
+    restart: on-failure
+    container_name: subject_service
+    build: subject_service/
+    ports:
+      - "8001:80"
